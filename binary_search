@@ -1,0 +1,23 @@
+/*
+binary_search is used to check for an element in an sorted array.
+It utilises a principle in which mid element is calculated and if the mid element is equal to our desired value we return mid
+other wise we again calculate mid value with start or end equal to mid+1,mid-1 
+and if start>end that means we utilised all the elements and tested it .In this case we return -1
+
+*/
+int binary_search(int a[],int n,int key){
+int s=0;int e=n-1;
+while(s<e){
+int mid=(s+e)/2;
+if(a[mid]==key){
+return mid;
+}
+else if(a[mid]<key){
+         s=mid+1;
+          }
+else{
+e=mid-1;
+   }
+}
+return -1;
+}

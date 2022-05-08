@@ -1,1 +1,9 @@
-
+In built sort function
+#include<iostream>
+#include<algorithm>
+using namespace std
+sort(a,a+n);
+bool compare(int a, int b){
+    return a>b;
+}
+ sort(array,array+12,compare);

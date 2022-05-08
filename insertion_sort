@@ -1,0 +1,14 @@
+void insertion_sort(int a[],int n){
+    for(int i=1;i<n;i++){
+        int j=i-1;//j will start from i-1
+        
+        int e;//current element is e lets say a[i]
+        e=a[i];
+        while(j>=0 && a[j]>e){//compare the current element with a[j]
+            a[j+1]=a[j];//in case if a[j] is  greater than current element
+            j--;//j--
+        }
+        a[j+1]=e;//agar bada nahi hota to current ke next element ko e ke barabar kardo
+    }
+    
+}

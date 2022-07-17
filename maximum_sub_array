@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main() {
+    int i,j,arr[1000],n,sarr[1000];
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        if(i==0){
+        sarr[0]=arr[0];    
+        }
+        else{
+            sarr[i]=sarr[i-1]+arr[i];
+        }
+    }
+    int maxsubarray,left,right;
+    for(int i=0;i<n;i++){
+        int subarray;
+        for(int j=i;j<n;j++){
+           subarray=sarr[j]-sarr[i-1];
+           if(subarray>maxsubarray){
+               maxsubarray=subarray;
+               left =i;
+               right=j;
+           }
+        }
+    }
+    cout<<maxsubarray<<endl;
+    for(int i=left;i<=right;i++){
+        cout<<arr[i]<<" ";
+    }
+     for(int i=left;i<=right;i++){
+        cout<<arr[i]<<" ";
+    }
+}

@@ -1,3 +1,8 @@
+/*
+In this maximum sub array we try to calculate the maximumsum of an array which is from one point to another point 
+the approach is to first calculate the sumarray which is equal to prvious sumarray[i-1]+newelement
+*/
+
 #include <iostream>
 #include <cstdio>
 using namespace std;
